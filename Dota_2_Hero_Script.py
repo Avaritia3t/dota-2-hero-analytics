@@ -1,3 +1,4 @@
+from os import stat
 import pandas as pd
 import time
 
@@ -30,16 +31,19 @@ def search_heroes(hero_to_find): #function to return specific hero row from the 
     hero_table['hero_name'] = hero_table['hero_name'].apply(lambda x: str(x).replace(u'\xa0', u'')) #fix some formatting errors. 
     hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function. 
     found_hero = False #using this just to see if the hero was found. 
+    hero_name_list = [] #create a list to store all the hero names. hero_name_list_index = hero row index.
 
     for i in range(hero_names.size): #for each name in the hero_names column, 
         current_hero_name = hero_names[i] #assign it to a current variable. 
-        if current_hero_name == hero_to_find: #if it matches the name we're looking for. 
-            print(hero_table.iloc[[i]]) #print the associated row. 
-            found_hero = True #and let the program know it was found. 
+        hero_name_list.append(current_hero_name)
+        if current_hero_name == hero_to_find: #if it matches the name we're looking for.
+            found_hero = True #and let the program know it was found.
+
+    if hero_to_find in hero_name_list:
+        return hero_name_list.index(hero_to_find)
 
     if found_hero == False: #if it wasn't found, 
         return False #return false.
-
 
 def get_table(): #this pretty much lies at the core of query functionality. Call the function to open the document. 
     hero_table = pd.read_csv(r'C:\Users\mathew.roberts\Desktop\Test Python Code\Dota_2_Hero_Table.csv')  #import the csv of hero stats.
@@ -48,13 +52,13 @@ def get_table(): #this pretty much lies at the core of query functionality. Call
 def search_columns(col_name): #initially, will analyze by column. 
     hero_table = get_table() #get the table
     table_columns = [] #create a list to store all the column names. table_columns index = column name index.
-    for i in range(len(hero_table.columns)): #and for each item in the list of column names. 
+    for i in range(len(hero_table.columns)): #and for each item in the list of column names.
         current_column_name = hero_table.columns[i]
         table_columns.append(current_column_name) #add that column name to table_columns
 
     if col_name in table_columns:
-        print(hero_table[col_name])
-        return True
+        return table_columns.index(col_name)
+
     else:
         print('Column not found. Available columns: ')
         for i in range(len(table_columns)):
@@ -86,9 +90,17 @@ def get_all_hero_names():
     
     print(name_array) #print the array for verification purposes.
 
-def get_hero_stats():
+def get_hero_stat():
     hero_table = get_table()
     hero_table['hero_name'] = hero_table['hero_name'].apply(lambda x: str(x).replace(u'\xa0', u'')) #fix some formatting errors. 
-    hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function. 
+    hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function.
+    
+    hero_to_find = input('Please enter hero name to query stats: ')
+    hero_index = search_heroes(hero_to_find)
+    stat_to_find = input('Please enter a stat to find: ')
+    stat_index = search_columns(stat_to_find)
+    hero_stat = hero_table.iat[hero_index, stat_index]
+    print(hero_to_find,'\'s',stat_to_find,'is',hero_stat)
 
-search_heroes('Axe')
+
+get_hero_stat()
