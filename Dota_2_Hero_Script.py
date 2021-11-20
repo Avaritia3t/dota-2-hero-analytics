@@ -1,6 +1,28 @@
-from os import stat
+from os import name
 import pandas as pd
 import time
+
+from pandas.core.indexes import base
+
+base_attributes = {
+    'agility': 'base_agi',
+    'intelligence': 'base_int',
+    'strength': 'base_str'
+}
+
+base_attribute_key_list = []
+for key in base_attributes.keys():
+    base_attribute_key_list.append(key)
+
+attribute_gain = {
+    'Agility gain':'agi_gain',
+    'Intelligence gain':'int_gain',
+    'Strength gain':'str_gain'
+}
+
+attribute_gain_list_key_list = []
+for key in attribute_gain.keys():
+    attribute_gain_list_key_list.append(key)
 
 def query(): #general query function, will be expanded to support additional query functionality.
     thing_to_find = input('Looking for: ' ) #
@@ -26,7 +48,7 @@ def query(): #general query function, will be expanded to support additional que
 
     return
 
-def search_heroes(hero_to_find): #function to return specific hero row from the list. 
+def search_heroes(hero_to_find): #returns index for each hero, or false if name is not recognized. 
     hero_table = get_table() #get the table. 
     hero_table['hero_name'] = hero_table['hero_name'].apply(lambda x: str(x).replace(u'\xa0', u'')) #fix some formatting errors. 
     hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function. 
@@ -43,13 +65,14 @@ def search_heroes(hero_to_find): #function to return specific hero row from the 
         return hero_name_list.index(hero_to_find)
 
     if found_hero == False: #if it wasn't found, 
+        print(hero_to_find,'not found.')
         return False #return false.
 
 def get_table(): #this pretty much lies at the core of query functionality. Call the function to open the document. 
     hero_table = pd.read_csv(r'C:\Users\mathew.roberts\Desktop\Test Python Code\Dota_2_Hero_Table.csv')  #import the csv of hero stats.
     return hero_table
 
-def search_columns(col_name): #initially, will analyze by column. 
+def search_columns(col_name): #returns index for the column name. 
     hero_table = get_table() #get the table
     table_columns = [] #create a list to store all the column names. table_columns index = column name index.
     for i in range(len(hero_table.columns)): #and for each item in the list of column names.
@@ -90,17 +113,66 @@ def get_all_hero_names():
     
     print(name_array) #print the array for verification purposes.
 
-def get_hero_stat():
+def get_hero_stat(hero_to_find):
     hero_table = get_table()
     hero_table['hero_name'] = hero_table['hero_name'].apply(lambda x: str(x).replace(u'\xa0', u'')) #fix some formatting errors. 
     hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function.
     
-    hero_to_find = input('Please enter hero name to query stats: ')
     hero_index = search_heroes(hero_to_find)
     stat_to_find = input('Please enter a stat to find: ')
     stat_index = search_columns(stat_to_find)
     hero_stat = hero_table.iat[hero_index, stat_index]
     print(hero_to_find,'\'s',stat_to_find,'is',hero_stat)
 
+class hero: #might as well just put all hero information in a hero class, and allow comparison that way....
+    '''hero class. will contain stats, preferred items, etc. '''
+    def __init__(self, name, level, primary_attribute, base_attr, attr_gain, abilities, roles):
+        self.name = name
+        self.level = level
+        self.primary_attribute = primary_attribute
+        self.base_attr = base_attr
+        self.attr_gain = attr_gain
+        self.abilities = abilities #will append abilities somehow...
+        self.roles = roles #not currently useful, will be used for idea prototyping.
 
-get_hero_stat()
+    def set_name():
+        name = input('Please enter hero name: ') #get the hero name. Will be expanded upon to include verification and 'like' similarity suggestions.
+        return name
+
+    name = set_name()
+
+    def set_level(x): #create a function for manually adjusting levels. 
+        level = x
+        return level
+
+    level = set_level(0)
+
+    def set_primary_attribute(name): #dynamically retrieve the primary attribute. 
+        hero_table = get_table() #get the table
+        hero_index = search_heroes(name) #get the hero index 
+        primary_attribute_index = search_columns('primary_attribute') #then the primary attribute index.
+        primary_attribute = hero_table.iat[hero_index, primary_attribute_index] #then find the exact value using the two indices. 
+        return primary_attribute #return that value. 
+
+    primary_attribute = set_primary_attribute(name)
+
+    def set_attr_gain(name): #dynamically initialize the attribute gain for each hero. 
+        hero_table = get_table() #get the table. 
+        hero_index = search_heroes(name) #get the hero name index.
+        attr_gain_list = {}
+        i = 0
+        for attr_gain_key in attribute_gain: #and for each attribute gain we're looking to find
+            current_attr_index = search_columns(attribute_gain[attr_gain_key]) #get the index for that column
+            current_attr_gain = hero_table.iat[hero_index, current_attr_index] #and find the value in that cell w/ the hero.
+            attr_gain_list[attribute_gain_list_key_list[i]] = current_attr_gain
+            i+=1
+        
+        return attr_gain_list
+
+    attr_gain = set_attr_gain(name)
+    abilities = None #no use for this functionality yet. 
+    roles = None #no use for this functionality yet either.
+
+def plot_hero_stat_gain(hero): #will develop further later.
+    hero_level = 0
+    hero_index = search_heroes(hero)
