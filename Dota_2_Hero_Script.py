@@ -1,13 +1,15 @@
-from os import name
+from os import name, stat
 import pandas as pd
 import time
+import matplotlib.pyplot as plt
+import numpy as np
 
-from pandas.core.indexes import base
+max_hero_level = 30
 
 base_attributes = {
-    'agility': 'base_agi',
-    'intelligence': 'base_int',
-    'strength': 'base_str'
+    'Base agility': 'base_agi',
+    'Base intelligence': 'base_int',
+    'Base strength': 'base_str'
 }
 
 base_attribute_key_list = []
@@ -72,6 +74,8 @@ def get_table(): #this pretty much lies at the core of query functionality. Call
     hero_table = pd.read_csv(r'C:\Users\mathew.roberts\Desktop\Test Python Code\Dota_2_Hero_Table.csv')  #import the csv of hero stats.
     return hero_table
 
+hero_table = get_table() #global hero table. Will remove redundancies eventually
+
 def search_columns(col_name): #returns index for the column name. 
     hero_table = get_table() #get the table
     table_columns = [] #create a list to store all the column names. table_columns index = column name index.
@@ -102,7 +106,7 @@ def format_column(column_name, str_to_remove): #dead function, just used to remo
 
     return column_to_format
 
-def get_all_hero_names():
+def get_all_hero_names(): #lists all hero names, returned in array format. 
     hero_table = get_table()
     hero_table['hero_name'] = hero_table['hero_name'].apply(lambda x: str(x).replace(u'\xa0', u'')) #fix some formatting errors. 
     hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function. 
@@ -113,7 +117,7 @@ def get_all_hero_names():
     
     print(name_array) #print the array for verification purposes.
 
-def get_hero_stat(hero_to_find):
+def get_hero_stat(hero_to_find): #returns the value contained in the stat cell.
     hero_table = get_table()
     hero_table['hero_name'] = hero_table['hero_name'].apply(lambda x: str(x).replace(u'\xa0', u'')) #fix some formatting errors. 
     hero_names = hero_table['hero_name'] #isolate the column of interest. Will expand upon this as a queryable function.
@@ -122,7 +126,8 @@ def get_hero_stat(hero_to_find):
     stat_to_find = input('Please enter a stat to find: ')
     stat_index = search_columns(stat_to_find)
     hero_stat = hero_table.iat[hero_index, stat_index]
-    print(hero_to_find,'\'s',stat_to_find,'is',hero_stat)
+
+    return hero_stat
 
 class hero: #might as well just put all hero information in a hero class, and allow comparison that way....
     '''hero class. will contain stats, preferred items, etc. '''
@@ -135,7 +140,7 @@ class hero: #might as well just put all hero information in a hero class, and al
         self.abilities = abilities #will append abilities somehow...
         self.roles = roles #not currently useful, will be used for idea prototyping.
 
-    def set_name():
+    def set_name(): #sets the hero name
         name = input('Please enter hero name: ') #get the hero name. Will be expanded upon to include verification and 'like' similarity suggestions.
         return name
 
@@ -152,27 +157,87 @@ class hero: #might as well just put all hero information in a hero class, and al
         hero_index = search_heroes(name) #get the hero index 
         primary_attribute_index = search_columns('primary_attribute') #then the primary attribute index.
         primary_attribute = hero_table.iat[hero_index, primary_attribute_index] #then find the exact value using the two indices. 
-        return primary_attribute #return that value. 
+        return primary_attribute #return that value.
 
     primary_attribute = set_primary_attribute(name)
+
+    def set_base_attributes(name): #dynamiclly set the base attributes. 
+        hero_table = get_table()
+        hero_index = search_heroes(name)
+        base_attr_dict = {}
+        i = 0
+        for base_attr_key in base_attributes:
+            current_base_index = search_columns(base_attributes[base_attr_key])
+            current_base_attr = hero_table.iat[hero_index, current_base_index]
+            base_attr_dict[base_attribute_key_list[i]] = current_base_attr
+            i += 1
+
+        return base_attr_dict
+
+    base_attr = set_base_attributes(name)
 
     def set_attr_gain(name): #dynamically initialize the attribute gain for each hero. 
         hero_table = get_table() #get the table. 
         hero_index = search_heroes(name) #get the hero name index.
-        attr_gain_list = {}
+        attr_gain_dict = {} #create dictionary to hold values. 
         i = 0
         for attr_gain_key in attribute_gain: #and for each attribute gain we're looking to find
             current_attr_index = search_columns(attribute_gain[attr_gain_key]) #get the index for that column
             current_attr_gain = hero_table.iat[hero_index, current_attr_index] #and find the value in that cell w/ the hero.
-            attr_gain_list[attribute_gain_list_key_list[i]] = current_attr_gain
+            attr_gain_dict[attribute_gain_list_key_list[i]] = current_attr_gain #write that value into the attr gain list. 
             i+=1
         
-        return attr_gain_list
+        return attr_gain_dict
 
     attr_gain = set_attr_gain(name)
-    abilities = None #no use for this functionality yet. 
-    roles = None #no use for this functionality yet either.
 
-def plot_hero_stat_gain(hero): #will develop further later.
-    hero_level = 0
-    hero_index = search_heroes(hero)
+    def plot_hero_stat_gain(hero_name): #plot hero stats vs level
+        hero_index = search_heroes(hero_name)
+        level_list = list(range(0,31))
+        
+        def get_agi_gain():
+            base_agi = hero_table.iat[hero_index,search_columns('base_agi')]
+            agi_gain = hero_table.iat[hero_index,search_columns('agi_gain')]
+            agi_gain_list = []
+            for i in level_list:
+                current_agi = base_agi + agi_gain * i
+                agi_gain_list.append(current_agi)
+            
+            return agi_gain_list
+
+        def get_int_gain():
+            base_int = hero_table.iat[hero_index, search_columns('base_int')]
+            int_gain = hero_table.iat[hero_index, search_columns('int_gain')]
+            int_gain_list = []
+            for i in level_list:
+                current_int = base_int + int_gain * i
+                int_gain_list.append(current_int)
+            
+            return int_gain_list
+
+        def get_str_gain():
+            base_str = hero_table.iat[hero_index, search_columns('base_str')]
+            str_gain = hero_table.iat[hero_index, search_columns('str_gain')]
+            str_gain_list = []
+            for i in level_list:
+                current_str = base_str + str_gain * i
+                str_gain_list.append(current_str)
+
+            return str_gain_list
+
+        agi_gain_list = get_agi_gain()
+        int_gain_list = get_int_gain()
+        str_gain_list = get_str_gain()
+
+        plt.plot(level_list, agi_gain_list, 'g^',
+                    level_list, int_gain_list, 'bs',
+                    level_list, str_gain_list, 'r--')
+        plt.xlabel('Level')
+        plt.ylabel('Stat Quantity')
+        stat_gain = ' stat gain'
+        plot_title = hero_name + stat_gain
+        plt.title(plot_title)
+        plt.show()
+
+new_hero = hero
+new_hero.plot_hero_stat_gain(new_hero.name)
