@@ -1,4 +1,6 @@
 import json
+import requests
+from bs4 import BeautifulSoup
 
 heroStatsFilePath = r'C:\Users\Sol\Desktop\allPythonCode\hero-stats'
 
@@ -43,7 +45,7 @@ def draft():
 
     while enemyPickOne == None:
         getFirstPicks()
-        
+
     firstRoundPicks = getFirstPicks()
     secondRoundPicks = getSecondPicks()
     thirdRoundPicks = getThirdPicks()
@@ -68,6 +70,21 @@ def analyze():
     # etc.
 
 analyze = analyze
+
+def get_hero_counters(hero):
+    #makes a request to the dotabuff counters page with the hero name.
+    #needs to be modified to accept a list of heroes, and for each hero make a request. 
+    response = requests.get('https://www.dotabuff.com/heroes/{}/counters'.format(hero))
+    soup = BeautifulSoup(response.content, 'html.parser')
+    print(soup)
+
+    td_elements = soup.find_all('tbody')
+    print(td_elements)
+
+    #for i in range(x):
+    #    data_value = td_elements[i]['data-value']
+    #    print(data_value)
+    return
 
 
 def query_hero():
@@ -114,4 +131,4 @@ def get_action():
         print("Sorry, I didn't understand that command.")
         get_action()
 
-draft()
+get_hero_counters('oracle')

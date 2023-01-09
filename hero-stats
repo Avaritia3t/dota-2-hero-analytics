@@ -36,7 +36,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Meepo", "Lone Druid", "Phantom Assassin", "Legion Commander", "Slardar"],
+    "safe_pick_round": ["Third"]
   },
   "2": {
     "id": 2,
@@ -77,7 +79,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Outworld Destroyer", "Timbersaw", "Leshrac", "Venomancer", "Pugna"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "3": {
     "id": 3,
@@ -117,7 +121,9 @@
     "cm_enabled": true,
     "legs": 4,
     "day_vision": 1800,
-    "night_vision": 1200
+    "night_vision": 1200,
+    "current_hero_counters": ["Meepo", "Lycan", "Naga Siren", "Phantom Lancer", "Chaos Knight"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "4": {
     "id": 4,
@@ -158,7 +164,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Medusa", "Chaos Knight", "Juggernaut", "Lifestealer", "Faceless Void"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "5": {
     "id": 5,
@@ -198,7 +206,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Enigma", "Earth Spirit", "Pudge", "Pangolier", "Rubick"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "6": {
     "id": 6,
@@ -237,7 +247,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Mars", "Tinker", "Zeus", "Phantom Lancer", "Earth Spirit"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "7": {
     "id": 7,
@@ -277,7 +289,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Templar Assassin", "Viper", "Clockwerk", "Huskar", "Rubick"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "8": {
     "id": 8,
@@ -316,7 +330,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Morphling", "Nature's Prophet", "Anti-Mage", "Io", "Night Stalker"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "9": {
     "id": 9,
@@ -357,7 +373,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Naga Siren", "Meepo", "Broodmother", "Puck", "Terrorblade"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "10": {
     "id": 10,
@@ -398,7 +416,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Nyx Assassin", "Axe", "Anti-Mage", "Ancient Apparition", "Dark Seer"],
+    "safe_pick_round": ["Third"]
   },
   "11": {
     "id": 11,
@@ -436,7 +456,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Batrider", "Templar Assassin", "Terrorblade", "Zeus", "Lina"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "12": {
     "id": 12,
@@ -476,7 +498,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Leshrac", "Sand King", "Underlord", "Timbersaw", "Necrophos"],
+    "safe_pick_round": ["Third"]
   },
   "13": {
     "id": 13,
@@ -516,7 +540,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Night Stalker", "Templar Assassin", "Riki", "Alchemist", "Lone Druid"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "14": {
     "id": 14,
@@ -556,7 +582,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Ursa", "Pangolier", "Monkey King", "Weaver", "Marci"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "15": {
     "id": 15,
@@ -596,7 +624,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Viper", "Broodmother", "Templar Assassin", "Lycan", "Bristleback"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "16": {
     "id": 16,
@@ -638,7 +668,9 @@
     "cm_enabled": true,
     "legs": 6,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Zeus", "Underlord", "Anti-Mage", "Clinkz", "Juggernaut"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "17": {
     "id": 17,
@@ -679,7 +711,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Meepo", "Anti-Mage", "Lone Druid", "Riki", "Troll Warlord"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "18": {
     "id": 18,
@@ -720,7 +754,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Troll Warlord", "Templar Assassin", "Winter Wyvern", "Clockwerk", "Medusa"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "19": {
     "id": 19,
@@ -762,7 +798,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Terrorblade", "Lifestealer", "Necrophos", "Underlord", "Venomancer"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "20": {
     "id": 20,
@@ -803,7 +841,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Phantom Lancer", "Naga Siren", "Lycan", "Meepo", "Terrorblade"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "21": {
     "id": 21,
@@ -844,7 +884,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Axe", "Centaur Warrunner", "Spectre", "Razor", "Puck"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "22": {
     "id": 22,
@@ -882,7 +924,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Anti-Mage", "Meepo", "Storm Spirit", "Chen", "Razor"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "23": {
     "id": 23,
@@ -924,7 +968,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Bloodseeker", "Clinkz", "Juggernaut", "Pangolier", "Bounty Hunter"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "25": {
     "id": 25,
@@ -964,7 +1010,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Templar Assassin", "Axe", "Phantom Assassin", "Winter Wyvern", "Windranger"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "26": {
     "id": 26,
@@ -1004,7 +1052,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Razor", "Beastmaster", "Tidehunter", "Shadow Demon", "Dragon Knight"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "27": {
     "id": 27,
@@ -1045,7 +1095,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Razor", "Meepo", "Phantom Lancer", "Naga Siren", "Terrorblade"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "28": {
     "id": 28,
@@ -1086,7 +1138,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Terrorblade", "Naga Siren", "Beastmaster", "Phantom Lancer", "Troll Warlord"],
+    "safe_pick_round": ["First", "Second"]
   },
   "29": {
     "id": 29,
@@ -1127,7 +1181,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Broodmother", "Chen", "Elder Titan", "Alchemist", "Brewmaster"],
+    "safe_pick_round": ["First", "Second"]
   },
   "30": {
     "id": 30,
@@ -1166,7 +1222,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Morphling", "Broodmother", "Puck", "Nature's Prophet", "Faceless Void"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "31": {
     "id": 31,
@@ -1204,7 +1262,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Shadow Demon", "Phoenix", "Keeper of the Light", "Anti-Mage", "Pugna"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "32": {
     "id": 32,
@@ -1243,7 +1303,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Naga Siren", "Underlord", "Bloodseeker", "Bristleback", "Bounty Hunter"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "33": {
     "id": 33,
@@ -1283,7 +1345,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Bristleback", "Rubick", "Clinkz", "Spectre", "Medusa"],
+    "safe_pick_round": ["Third"]
   },
   "34": {
     "id": 34,
@@ -1322,7 +1386,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Batrider", "Pugna", "Nyx Assassin", "Anti-Mage", "Visage"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "35": {
     "id": 35,
@@ -1360,7 +1426,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 1400
+    "night_vision": 1400,
+    "current_hero_counters": ["Storm Spirit", "Mars", "Morphling", "Spectre", "Earth Spirit"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "36": {
     "id": 36,
@@ -1400,7 +1468,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Drow Ranger", "Viper", "Ancient Apparition", "Leshrac", "Silencer"],
+    "safe_pick_round": ["First", "Second"]
   },
   "37": {
     "id": 37,
@@ -1439,7 +1509,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Bristleback", "Broodmother", "Weaver", "Shadow Fiend", "Slark"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "38": {
     "id": 38,
@@ -1479,7 +1551,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Medusa", "Bristleback", "Clinkz", "Ember Spirit", "Weaver"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "39": {
     "id": 39,
@@ -1518,7 +1592,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Medusa", "Puck", "Huskar", "Ember Spirit", "Legion Commander"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "40": {
     "id": 40,
@@ -1559,7 +1635,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Phantom Lancer", "Arc Warden", "Nature's Prophet", "Legion Commander", "Juggernaut"],
+    "safe_pick_round": ["Second"]
   },
   "41": {
     "id": 41,
@@ -1600,7 +1678,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Axe", "Huskar", "Meepo", "Chaos Knight", "Shadow Shaman"],
+    "safe_pick_round": ["Third"]
   },
   "42": {
     "id": 42,
@@ -1641,7 +1721,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Phantom Lancer", "Underlord", "Naga Siren", "Leshrac", "Undying"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "43": {
     "id": 43,
@@ -1681,7 +1763,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Medusa", "Undying", "Drow Ranger", "Sniper", "Weaver"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "44": {
     "id": 44,
@@ -1719,7 +1803,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Axe", "Morphling", "Timbersaw", "Primal Beast", "Templar Assassin"],
+    "safe_pick_round": ["Third"]
   },
   "45": {
     "id": 45,
@@ -1757,7 +1843,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Pudge", "Anti-Mage", "Medusa", "Primal Beast", "Chaos Knight"],
+    "safe_pick_round": ["Second"]
   },
   "46": {
     "id": 46,
@@ -1795,7 +1883,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Phantom Lancer", "Batrider", "Naga Siren", "Terrorblade", "Troll Warlord"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "47": {
     "id": 47,
@@ -1835,7 +1925,9 @@
     "cm_enabled": true,
     "legs": 0,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Morphling", "Terrorblade", "Naga Siren", "Chaos Knight", "Phantom Lancer"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "48": {
     "id": 48,
@@ -1874,7 +1966,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Spectre", "Meepo", "Dark Seer", "Bristleback", "Rubick"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "49": {
     "id": 49,
@@ -1916,7 +2010,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Phantom Lancer", "Underlord", "Terrorblade", "Viper", "Dark Seer"],
+    "safe_pick_round": ["Second"]
   },
   "50": {
     "id": 50,
@@ -1955,7 +2051,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Ancient Apparition", "Omniknight", "Silencer", "Outworld Destroyer", "Tidehunter"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "51": {
     "id": 51,
@@ -1995,7 +2093,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Broodmother", "Meepo", "Phantom Lancer", "Anti-Mage", "Naga Siren"],
+    "safe_pick_round": ["First", "Second"]
   },
   "52": {
     "id": 52,
@@ -2036,7 +2136,9 @@
     "cm_enabled": true,
     "legs": 4,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Ancient Apparition", "Drow Ranger", "Medusa", "Broodmother", "Ursa"],
+    "safe_pick_round": ["", ""]
   },
   "53": {
     "id": 53,
@@ -2077,7 +2179,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Broodmother", "Spectre", "Terrorblade", "Axe", "Morphling"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "54": {
     "id": 54,
@@ -2118,7 +2222,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Troll Warlord", "Enigma", "Broodmother", "Morphling", "Nature's Prophet"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "55": {
     "id": 55,
@@ -2158,7 +2264,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Clinkz", "Oracle", "Batrider", "Enchantress", "Bloodseeker"],
+    "safe_pick_round": ["First", "Second", "Third"]
   },
   "56": {
     "id": 56,
@@ -2197,7 +2305,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Bounty Hunter", "Bristleback", "Slardar", "Drow Ranger", "Wraith King"],
+    "safe_pick_round": ["Third"]
   },
   "57": {
     "id": 57,
@@ -2236,7 +2346,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Leshrac", "Outworld Destroyer", "Necrophos", "Shadow Demon", "Ancient Apparition"],
+    "safe_pick_round": ["Second"]
   },
   "58": {
     "id": 58,
@@ -2277,7 +2389,9 @@
     "cm_enabled": true,
     "legs": 4,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Naga Siren", "Phantom Assassin", "Crystal Maiden", "Pudge", "Phantom Lancer"],
+    "safe_pick_round": ["Second"]
   },
   "59": {
     "id": 59,
@@ -2316,7 +2430,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Ancient Apparition", "Necrophos", "Viper", "Phantom Lancer", "Axe"],
+    "safe_pick_round": ["Second"]
   },
   "60": {
     "id": 60,
@@ -2357,7 +2473,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 800,
-    "night_vision": 1800
+    "night_vision": 1800,
+    "current_hero_counters": ["Naga Siren", "Meepo", "Troll Warlord", "Phantom Lancer", "Huskar"],
+    "safe_pick_round": ["Second"]
   },
   "61": {
     "id": 61,
@@ -2397,7 +2515,9 @@
     "cm_enabled": true,
     "legs": 8,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Terrorblade", "Bristleback", "Earthshaker", "Troll Warlord", "Phantom Lancer"],
+    "safe_pick_round": ["Third"]
   },
   "62": {
     "id": 62,
@@ -2435,7 +2555,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 1000
+    "night_vision": 1000,
+    "current_hero_counters": ["Naga Siren", "Meepo", "Phantom Lancer", "Huskar", "Slark"],
+    "safe_pick_round": ["Second"]
   },
   "63": {
     "id": 63,
@@ -2473,7 +2595,9 @@
     "cm_enabled": true,
     "legs": 4,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Faceless Void", "Naga Siren", "Drow Ranger", "Axe", "Techies"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "64": {
     "id": 64,
@@ -2513,7 +2637,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1800,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Rubick", "Juggernaut", "Abaddon", "Oracle", "Tinker"],
+    "safe_pick_round": ["First", "Second"]
   },
   "65": {
     "id": 65,
@@ -2553,7 +2679,9 @@
     "cm_enabled": true,
     "legs": 2,
     "day_vision": 1600,
-    "night_vision": 800
+    "night_vision": 800,
+    "current_hero_counters": ["Queen of Pain", "Slark", "Weaver", "Viper", "Juggernaut"],
+    "safe_pick_round": ["Second", "Third"]
   },
   "66": {
     "id": 66,
